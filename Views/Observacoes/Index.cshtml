@@ -1,0 +1,53 @@
+﻿@model IEnumerable<LookingThings.Models.Observacoes>
+
+@{
+    ViewData["Title"] = "Observações";
+}
+
+<h1>Observações</h1>
+
+<p>
+    <a asp-action="Create">Criar Observação</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ObservacoesDescricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObservacoesData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Objeto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObservacoesDescricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObservacoesData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.UsuarioNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Objeto.ObjetoNome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ObservacoesId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.ObservacoesId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.ObservacoesId">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
