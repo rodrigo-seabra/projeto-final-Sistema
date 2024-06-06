@@ -4,43 +4,51 @@
     ViewData["Title"] = "Criando Observação";
 }
 
-<h1>Criar Observação</h1>
+<h1 class="text-center" style="color: #32CD32;">Criar Observação</h1>
 
+<div class="login-box">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ObservacoesDescricao" class="control-label"></label>
-                <input asp-for="ObservacoesDescricao" class="form-control" />
-                <span asp-validation-for="ObservacoesDescricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ObservacoesData" class="control-label"></label>
-                <input asp-for="ObservacoesData" class="form-control" />
-                <span asp-validation-for="ObservacoesData" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UsuarioId" class="control-label"></label>
-                <select asp-for="UsuarioId" class="form-control" asp-items="ViewBag.UsuarioId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="ObjetoId" class="control-label"></label>
-                <select asp-for="ObjetoId" class="form-control" asp-items="ViewBag.ObjetoId"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Cadastrar" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+        <div class="user-box">
+            <input asp-for="ObservacoesDescricao" class="form-control" required="" />
+            <label asp-for="ObservacoesDescricao" class="control-label">Descrição</label>
+            <span asp-validation-for="ObservacoesDescricao" class="text-danger"></span>
+        </div>
+
+        <div
+            <label asp-for="ObservacoesData" class="control-label"></label>
+            <input asp-for="ObservacoesData" class="form-control" required="" />
+            <span asp-validation-for="ObservacoesData" class="text-danger"></span>
+        </div>
+
+        <div >
+            <label asp-for="UsuarioId" class="control-label"></label>
+            <select asp-for="UsuarioId" class="form-control" asp-items="ViewBag.UsuarioId"></select>
+            <span asp-validation-for="UsuarioId" class="text-danger"></span>
+        </div>
+
+        <div >
+            <label asp-for="ObjetoId" class="control-label"></label>
+            <select asp-for="ObjetoId" class="form-control" asp-items="ViewBag.ObjetoId"></select>
+            <span asp-validation-for="ObjetoId" class="text-danger"></span>
+        </div>
+
+        <center>
+            <a href="#" onclick="document.forms[0].submit();" class="send-button">
+                CADASTRAR
+                <span></span>
+            </a>
+        </center>
+    </form>
 </div>
 
-<div>
-    <a asp-action="Index">Voltar</a>
+<div class="text-center mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

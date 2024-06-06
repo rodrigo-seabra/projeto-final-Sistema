@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno\\Desktop\\ProjetoFinal3Semestre\\LookingThings\\LookingThings.csproj": {}
+    "E:\\programação\\projeto-final-Sistema\\LookingThings.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno\\Desktop\\ProjetoFinal3Semestre\\LookingThings\\LookingThings.csproj": {
+    "E:\\programação\\projeto-final-Sistema\\LookingThings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\ProjetoFinal3Semestre\\LookingThings\\LookingThings.csproj",
+        "projectUniqueName": "E:\\programação\\projeto-final-Sistema\\LookingThings.csproj",
         "projectName": "LookingThings",
-        "projectPath": "C:\\Users\\Aluno\\Desktop\\ProjetoFinal3Semestre\\LookingThings\\LookingThings.csproj",
-        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno\\Desktop\\ProjetoFinal3Semestre\\LookingThings\\obj\\",
+        "projectPath": "E:\\programação\\projeto-final-Sistema\\LookingThings.csproj",
+        "packagesPath": "C:\\Users\\rodri_icx4b3b\\.nuget\\packages\\",
+        "outputPath": "E:\\programação\\projeto-final-Sistema\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rodri_icx4b3b\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

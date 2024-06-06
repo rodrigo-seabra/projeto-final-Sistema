@@ -4,44 +4,53 @@
     ViewData["Title"] = "Criando User";
 }
 
-<h1>Cadastrar Usuário</h1>
+<h1 class="text-center" style="color: #32CD32;">Cadastrar Usuário</h1>
 
+<div class="login-box">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        
+        <div class="user-box">
+            <input asp-for="UsuarioNome" class="form-control" required="" />
+            <label asp-for="UsuarioNome" class="control-label">Nome</label>
+            <span asp-validation-for="UsuarioNome" class="text-danger"></span>
+        </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="UsuarioNome" class="control-label"></label>
-                <input asp-for="UsuarioNome" class="form-control" />
-                <span asp-validation-for="UsuarioNome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UsuarioEmail" class="control-label"></label>
-                <input asp-for="UsuarioEmail" class="form-control" />
-                <span asp-validation-for="UsuarioEmail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UsuarioTelefone" class="control-label"></label>
-                <input asp-for="UsuarioTelefone" class="form-control" />
-                <span asp-validation-for="UsuarioTelefone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UsuarioSenha" class="control-label"></label>
-                <input asp-for="UsuarioSenha" class="form-control" />
-                <span asp-validation-for="UsuarioSenha" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Cadastrar" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+        <div class="user-box">
+            <input asp-for="UsuarioEmail" class="form-control" required="" />
+            <label asp-for="UsuarioEmail" class="control-label">Email</label>
+            <span asp-validation-for="UsuarioEmail" class="text-danger"></span>
+        </div>
+
+        <div class="user-box">
+            <input asp-for="UsuarioTelefone" class="form-control" required="" />
+            <label asp-for="UsuarioTelefone" class="control-label">Telefone</label>
+            <span asp-validation-for="UsuarioTelefone" class="text-danger"></span>
+        </div>
+
+        <div class="user-box">
+            <input asp-for="UsuarioSenha" type="password" class="form-control" required="" />
+            <label asp-for="UsuarioSenha" class="control-label">Senha</label>
+            <span asp-validation-for="UsuarioSenha" class="text-danger"></span>
+        </div>
+
+        <center>
+            <a href="#" onclick="document.forms[0].submit();" class="send-button">
+                CADASTRAR
+                <span></span>
+            </a>
+        </center>
+    </form>
 </div>
 
-<div>
-    <a asp-action="Index">Voltar</a>
+<div class="text-center mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<style>
+
+</style>

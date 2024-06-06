@@ -7,67 +7,92 @@
 <h1>Editando o objeto: @Html.DisplayTextFor(model => model.ObjetoNome)</h1>
 
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="login-box">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ObjetoId" />
-            <div class="form-group">
-                <label asp-for="ObjetoNome" class="control-label"></label>
-                <input asp-for="ObjetoNome" class="form-control" />
-                <span asp-validation-for="ObjetoNome" class="text-danger"></span>
+
+            <div class="row">
+                <div class="col-md-6 user-box">
+                    <input asp-for="ObjetoNome" class="form-control" required="" />
+                    <label asp-for="ObjetoNome" class="control-label">Nome</label>
+                    <span asp-validation-for="ObjetoNome" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 user-box">
+                    <input asp-for="ObjetoCor" class="form-control" required="" />
+                    <label asp-for="ObjetoCor" class="control-label">Cor</label>
+                    <span asp-validation-for="ObjetoCor" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ObjetoCor" class="control-label"></label>
-                <input asp-for="ObjetoCor" class="form-control" />
-                <span asp-validation-for="ObjetoCor" class="text-danger"></span>
+
+            <div class="row">
+                <div class="col-md-12 user-box">
+                    <input asp-for="ObjetoObservacao" class="form-control" required="" />
+                    <label asp-for="ObjetoObservacao" class="control-label">Observação</label>
+                    <span asp-validation-for="ObjetoObservacao" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ObjetoObservacao" class="control-label"></label>
-                <input asp-for="ObjetoObservacao" class="form-control" />
-                <span asp-validation-for="ObjetoObservacao" class="text-danger"></span>
+
+            <div class="row">
+                <div class="col-md-12 user-box">
+                    <input asp-for="ObjetoLocalDesaparecimento" class="form-control" required="" />
+                    <label asp-for="ObjetoLocalDesaparecimento" class="control-label">Local de Desaparecimento</label>
+                    <span asp-validation-for="ObjetoLocalDesaparecimento" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ObjetoLocalDesaparecimento" class="control-label"></label>
-                <input asp-for="ObjetoLocalDesaparecimento" class="form-control" />
-                <span asp-validation-for="ObjetoLocalDesaparecimento" class="text-danger"></span>
+
+            <div class="row">
+                <div class="col-md-6 user-box">
+                    <input asp-for="ObjetoFoto" class="form-control" required="" />
+                    <label asp-for="ObjetoFoto" class="control-label">Foto</label>
+                    <span asp-validation-for="ObjetoFoto" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 user-box">
+                    <input asp-for="ObjetoStatus" class="form-control" required="" />
+                    <label asp-for="ObjetoStatus" class="control-label">Status</label>
+                    <span asp-validation-for="ObjetoStatus" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ObjetoFoto" class="control-label"></label>
-                <input asp-for="ObjetoFoto" class="form-control" />
-                <span asp-validation-for="ObjetoFoto" class="text-danger"></span>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label asp-for="ObjetoDtDesaparecimento" class="control-label">Data de Perda</label>
+                    <input asp-for="ObjetoDtDesaparecimento" class="form-control" type="date" required="" />
+                    <span asp-validation-for="ObjetoDtDesaparecimento" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="ObjetoDtEncontro" class="control-label">Dt. de Encontro</label>
+                    <input asp-for="ObjetoDtEncontro" class="form-control" type="date" required="" />
+                    <span asp-validation-for="ObjetoDtEncontro" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ObjetoDtDesaparecimento" class="control-label"></label>
-                <input asp-for="ObjetoDtDesaparecimento" class="form-control" />
-                <span asp-validation-for="ObjetoDtDesaparecimento" class="text-danger"></span>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label asp-for="UsuarioId" class="control-label">Usuário</label>
+                    <select asp-for="UsuarioId" class="form-control" asp-items="ViewBag.UsuarioId">
+                        <option value="">Selecione um usuário</option>
+                        @foreach (var user in (IEnumerable<SelectListItem>)ViewBag.UsuarioId)
+                        {
+                            <option value="@user.Value">@user.Text</option>
+                        }
+                    </select>
+                    <span asp-validation-for="UsuarioId" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ObjetoDtEncontro" class="control-label"></label>
-                <input asp-for="ObjetoDtEncontro" class="form-control" />
-                <span asp-validation-for="ObjetoDtEncontro" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ObjetoStatus" class="control-label"></label>
-                <input asp-for="ObjetoStatus" class="form-control" />
-                <span asp-validation-for="ObjetoStatus" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UsuarioId" class="control-label"></label>
-                <select asp-for="UsuarioId" class="form-control" asp-items="ViewBag.UsuarioId"></select>
-                <span asp-validation-for="UsuarioId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
-            </div>
+        <center>
+            <a href="#" onclick="document.forms[0].submit();" class="send-button">
+                EDITAR
+                <span></span>
+            </a>
+        </center>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Voltar</a>
+<div class="text-center mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

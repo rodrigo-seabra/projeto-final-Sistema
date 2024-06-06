@@ -6,78 +6,52 @@
 
 <h1>Objetos</h1>
 
-<p>
-    <a asp-action="Create">Cadastrar Objeto</a>
+<p class="create-button-section">
+    <a class="create-button" asp-action="Create">Cadastrar Objeto</a>
 </p>
+<div class="container">
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ObjetoNome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ObjetoCor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ObjetoObservacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ObjetoLocalDesaparecimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ObjetoFoto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ObjetoDtDesaparecimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ObjetoDtEncontro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ObjetoStatus)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Usuario)
-            </th>
+            <th>Objeto</th>
+            <th>Cor</th>
+            <th>@Html.DisplayNameFor(model => model.ObjetoObservacao)</th>
+            <th>@Html.DisplayNameFor(model => model.ObjetoFoto)</th>
+            <th>Local de desaparecimento</th>
+            <th>@Html.DisplayNameFor(model => model.ObjetoDtDesaparecimento)</th>
+            <th>@Html.DisplayNameFor(model => model.ObjetoDtEncontro)</th>
+            <th>Status</th>
+            <th>@Html.DisplayNameFor(model => model.Usuario)</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjetoNome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjetoCor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjetoObservacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjetoLocalDesaparecimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjetoFoto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjetoDtDesaparecimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjetoDtEncontro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjetoStatus)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Usuario.UsuarioNome)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ObjetoId">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.ObjetoId">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.ObjetoId">Excluir</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ObjetoNome)</td>
+                <td>@Html.DisplayFor(modelItem => item.ObjetoCor)</td>
+                <td>@Html.DisplayFor(modelItem => item.ObjetoObservacao)</td>
+                <td class="truncate">
+                    <span class="truncate-text">@item.ObjetoFoto</span>
+                    <button class="toggle-btn" onclick="toggleVisibility(this)">Mostrar</button>
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.ObjetoLocalDesaparecimento)</td>
+                <td>@Html.DisplayFor(modelItem => item.ObjetoDtDesaparecimento)</td>
+                <td>@Html.DisplayFor(modelItem => item.ObjetoDtEncontro)</td>
+                <td>@Html.DisplayFor(modelItem => item.ObjetoStatus)</td>
+                <td>@Html.DisplayFor(modelItem => item.Usuario.UsuarioNome)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ObjetoId" class="edit-btn">Editar</a> 
+                    <a asp-action="Details" asp-route-id="@item.ObjetoId" class="details-btn">Detalhes</a> 
+                    <a asp-action="Delete" asp-route-id="@item.ObjetoId" class="delete-btn"><i class="fas fa-trash icon-trash"></i></a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+</div>
+
+
