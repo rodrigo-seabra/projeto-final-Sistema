@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "39taCl3K0u/Bw7vt2xLEExiOQlgrCj/BDVx9kQK4oSE=",
+  "Hash": "cPSfBufZ0kLgeNs0vqhHk759LYlMF6MWUHby9gIUrIY=",
   "Source": "LookingThings",
   "BasePath": "_content/LookingThings",
   "Mode": "Default",
@@ -100,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\programação\\projeto-final-Sistema\\wwwroot\\images\\logoHorizontal.png",
+      "SourceId": "LookingThings",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\programação\\projeto-final-Sistema\\wwwroot\\",
+      "BasePath": "_content/LookingThings",
+      "RelativePath": "images/logoHorizontal.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logoHorizontal.png"
+    },
+    {
+      "Identity": "E:\\programação\\projeto-final-Sistema\\wwwroot\\images\\LogoLookingThings.png",
+      "SourceId": "LookingThings",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\programação\\projeto-final-Sistema\\wwwroot\\",
+      "BasePath": "_content/LookingThings",
+      "RelativePath": "images/LogoLookingThings.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\LogoLookingThings.png"
     },
     {
       "Identity": "E:\\programação\\projeto-final-Sistema\\wwwroot\\js\\site.js",

@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\programação\\projeto-final-Sistema\\wwwroot\\images\\LogoLookingThings.png",
+      "PackagePath": "staticwebassets\\images\\LogoLookingThings.png"
+    },
+    {
+      "Id": "E:\\programação\\projeto-final-Sistema\\wwwroot\\images\\logoHorizontal.png",
+      "PackagePath": "staticwebassets\\images\\logoHorizontal.png"
+    },
+    {
       "Id": "E:\\programação\\projeto-final-Sistema\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
