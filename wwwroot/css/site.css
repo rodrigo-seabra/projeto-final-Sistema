@@ -1,5 +1,7 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -28,11 +30,50 @@ nav {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+footer {
+    position:page;
+    background-color: #d5d9d3;
+    -webkit-box-shadow: -1px -6px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -1px -6px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: -1px -6px 5px 0px rgba(0,0,0,0.3);
 }
 
-body {
-  margin-bottom: 60px;
+h1 {
+    color: #32CD32; /* Verde limão para o título */
+}
+
+h4 {
+    color: #32CD32;
+}
+
+a {
+    color: #32CD32;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+hr {
+    border-top: 1px solid #696969; /* Cinza escuro para a linha horizontal */
+}
+
+dl.row {
+    background-color: #696969; /* Fundo cinza escuro para o container */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+dt.col-sm-2 {
+    color: #32CD32; /* Verde limão para os títulos das descrições */
+    font-weight: bold;
+}
+
+dd.col-sm-10 {
+    background-color: #fff; /* Fundo branco para os valores das descrições */
+    color: #000; /* Texto preto */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }

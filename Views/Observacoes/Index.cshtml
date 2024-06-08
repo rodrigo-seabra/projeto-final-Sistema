@@ -9,33 +9,32 @@
 <p class="create-button-section">
     <a class="create-button" asp-action="Create">Criar Observação</a>
 </p>
-<div class="container">
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.ObservacoesDescricao)</th>
-            <th>@Html.DisplayNameFor(model => model.ObservacoesData)</th>
-            <th>@Html.DisplayNameFor(model => model.Usuario)</th>
-            <th>@Html.DisplayNameFor(model => model.Objeto)</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="table-container">
+    <table class="table">
+        <thead>
             <tr>
-                <td>@Html.DisplayFor(modelItem => item.ObservacoesDescricao)</td>
-                <td>@Html.DisplayFor(modelItem => item.ObservacoesData)</td>
-                <td>@Html.DisplayFor(modelItem => item.Usuario.UsuarioNome)</td>
-                <td>@Html.DisplayFor(modelItem => item.Objeto.ObjetoNome)</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ObservacoesId" class="edit-btn">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.ObservacoesId" class="details-btn">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ObservacoesId" class="delete-btn"><i class="fas fa-trash icon-trash"></i></a>
-                </td>
+                <th>@Html.DisplayNameFor(model => model.ObservacoesDescricao)</th>
+                <th>@Html.DisplayNameFor(model => model.ObservacoesData)</th>
+                <th>@Html.DisplayNameFor(model => model.Usuario)</th>
+                <th>@Html.DisplayNameFor(model => model.Objeto)</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.ObservacoesDescricao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ObservacoesData)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Usuario.UsuarioNome)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Objeto.ObjetoNome)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ObservacoesId" class="edit-btn">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.ObservacoesId" class="details-btn">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ObservacoesId" class="delete-btn"><i class="fas fa-trash icon-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
