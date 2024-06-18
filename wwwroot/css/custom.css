@@ -367,7 +367,7 @@ h1 {
 
 .table-container {
     margin-top: 30px;
-    max-height: 450px; /* Ajuste a altura conforme necessário */
-    overflow-y: auto; /* Permite scroll vertical */
-    margin-bottom: 20px; /* Espaço inferior para evitar sobreposição do footer */
+    max-height: 450px; 
+    overflow-y: auto; 
+    margin-bottom: 20px; 
 }
