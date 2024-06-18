@@ -58,7 +58,7 @@ namespace LookingThings.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ObservacoesId,ObservacoesDescricao,ObservacoesData,UsuarioId,ObjetoId")] Observacoes observacoes)
+        public async Task<IActionResult> Create([Bind("ObservacoesId,ObservacoesDescricao,ObservacoesData,ObservacaoLocal,UsuarioId,ObjetoId")] Observacoes observacoes)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace LookingThings.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ObservacoesId,ObservacoesDescricao,ObservacoesData,UsuarioId,ObjetoId")] Observacoes observacoes)
+        public async Task<IActionResult> Edit(int id, [Bind("ObservacoesId,ObservacoesDescricao,ObservacoesData,ObservacaoLocal,UsuarioId,ObjetoId")] Observacoes observacoes)
         {
             if (id != observacoes.ObservacoesId)
             {
@@ -160,14 +160,14 @@ namespace LookingThings.Controllers
             {
                 _context.Observacoes.Remove(observacoes);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ObservacoesExists(int id)
         {
-          return (_context.Observacoes?.Any(e => e.ObservacoesId == id)).GetValueOrDefault();
+            return (_context.Observacoes?.Any(e => e.ObservacoesId == id)).GetValueOrDefault();
         }
     }
 }

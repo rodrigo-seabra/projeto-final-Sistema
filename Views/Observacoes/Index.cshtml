@@ -15,8 +15,9 @@
             <tr>
                 <th>@Html.DisplayNameFor(model => model.ObservacoesDescricao)</th>
                 <th>@Html.DisplayNameFor(model => model.ObservacoesData)</th>
-                <th>@Html.DisplayNameFor(model => model.Usuario)</th>
-                <th>@Html.DisplayNameFor(model => model.Objeto)</th>
+                <th>@Html.DisplayNameFor(model => model.ObservacaoLocal)</th>
+                <th>@Html.DisplayNameFor(model => model.Usuario.UsuarioNome)</th>
+                <th>@Html.DisplayNameFor(model => model.Objeto.ObjetoNome)</th>
                 <th></th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                 <tr>
                     <td>@Html.DisplayFor(modelItem => item.ObservacoesDescricao)</td>
                     <td>@Html.DisplayFor(modelItem => item.ObservacoesData)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ObservacaoLocal)</td>
                     <td>@Html.DisplayFor(modelItem => item.Usuario.UsuarioNome)</td>
                     <td>@Html.DisplayFor(modelItem => item.Objeto.ObjetoNome)</td>
                     <td>

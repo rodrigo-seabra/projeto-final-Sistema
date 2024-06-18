@@ -18,6 +18,10 @@ namespace LookingThings.Models
         [Display(Name = "Data da Observação")]
         public DateTime? ObservacoesData { get; set; }
 
+        [Column("ObservacaoLocal")]
+        [Display(Name = "Local da Observação")]
+        public string? ObservacaoLocal { get; set; }
+
         [ForeignKey("UsuarioId")]
         [Display(Name = "Código do usuário")]
         public int UsuarioId { get; set; }

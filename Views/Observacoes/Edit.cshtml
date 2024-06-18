@@ -23,6 +23,13 @@
             <span asp-validation-for="ObservacoesData" class="text-danger"></span>
         </div>
 
+
+        <div class="user-box">
+            <input asp-for="ObservacaoLocal" class="form-control" />
+            <label asp-for="ObservacaoLocal" class="control-label">Local da Observação</label>
+            <span asp-validation-for="ObservacaoLocal" class="text-danger"></span>
+        </div>
+
         <div >
             <label asp-for="UsuarioId" class="control-label">Usuário</label>
             <select asp-for="UsuarioId" class="form-control" asp-items="ViewBag.UsuarioId"></select>
